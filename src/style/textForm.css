@@ -2,12 +2,13 @@
     width: 100%;
     margin-top: 0px;
     min-height: 100vh;
+    padding-top: 30px;
 }
 #textForm{
     display: block;
     width: 65%;
     margin: auto;
-    /* height: 100%; */
+    /* color: white; */
 }
 #textForm>h1, #textForm>h2{
     padding: 2px 0px 4px 0px;
@@ -43,4 +44,18 @@ textarea{
 #light{
     background-color: rgb(255, 255, 255);
     color: black;
+}
+
+
+@media (max-width: 550px) {
+    .main{
+        padding-top: 22px;
+    }
+    #textForm>h1, #textForm>h2{
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 10px;
+        padding: 4px 9px;
+    }
 }

@@ -1,4 +1,5 @@
 nav{
+    /* background-color: black; */
     background-color: black;
     color: white;
     padding: 4px 0px;
@@ -9,19 +10,24 @@ nav{
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* position: fixed; */
 }
+#appLogo{
+    /* width: 10%; */
+    justify-self: center;
+    align-self: center;
+}
 #appLogo>a{
     text-decoration: none;
+    text-align: center;
 }
 #appLogo>a>h4{
     border: 2px solid rgb(59, 255, 219);
     padding: 5px 8px;
-    margin: 2px;
+    margin-left: 5px;
     color: rgb(77, 253, 144);
     font-weight: bold;
     border-radius: 5px;
 }
 #navBtn{
-    /* display: inline; */
     margin: auto;
 }
 #navBtn>ul{
@@ -34,7 +40,7 @@ nav{
 #navBtn>ul>li>a{
     border: 2px solid rgb(59, 255, 219);
     padding: 5px 8px;
-    margin: 2px 4px;
+    margin-left: 8px;
     color: rgb(77, 253, 144);
     font-weight: bold;
     border-radius: 8px;
@@ -76,4 +82,24 @@ nav{
 .checkbox>p{
     padding-left: 3px;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 550px) {
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #navBtn{
+        padding-bottom: 5px;
+    }
+
+    #appLogo>a>h4{
+        font-size: 10px;
+    }
+    #navBtn>ul>li>a{
+        font-size: 10px;
+    }
 }
