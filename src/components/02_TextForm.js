@@ -4,10 +4,6 @@ import '../style/textForm.css'
 
 export default function TextForm(props) {
 
-  let rma = '555';
-  rma += '8555';
-  console.log(rma)
-
   const hg = ()=>{
     const randomWords = require('random-words')
     console.log(randomWords(5))
