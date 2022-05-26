@@ -51,7 +51,7 @@ function App() {
         <Alert alert={alert} mode={mode} />
         
         <Routes>
-          <Route exact path="/" element={<TextForm formHeading="Text Analyzer : Count Word , Character and  Upper case, Lower case and remove extra spaces!" mode={mode} showAlert={showAlert}  />} /> 
+          <Route exact path="/" element={<TextForm formHeading="Hello :) Utkarsh Yadav" mode={mode} showAlert={showAlert}  />} /> 
           <Route exact path="/about" element={<About mode={mode} />} />
         </Routes>
 

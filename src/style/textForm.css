@@ -10,15 +10,27 @@
     margin: auto;
     /* color: white; */
 }
-#textForm>h1, #textForm>h2{
+#textForm>h2{
     padding: 2px 0px 4px 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-textarea{
+#displayWord{
+    width: 89%;
+    border: 2px solid red;
+    border-radius: 13px;
+    padding: 9px 7px;
+    padding-right: 0px;
+    font-size: 30px;
+    margin: 8px 1px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#Text_box{
     display: block;
+    font-size: 25px;
     background-color: rgb(255, 247, 247);
     border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  sans-serif;
     padding: 5px;
     border: 1px solid red;
     width: 90%;
