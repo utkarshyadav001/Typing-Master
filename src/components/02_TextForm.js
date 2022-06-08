@@ -10,8 +10,9 @@ export default class TextForm extends Component {
       text: "",
       randomWord: randomWords({ exactly: 500, join: ' ' }),
       randomWordString: [],
-      currentTime: new Date(),
-      typingStartTtime: false,
+      // currentTime: new Date(),
+      currentTime: 0,
+      // typingStartTtime: false,
       typingSpeed: NaN
     };
   }
@@ -50,15 +51,13 @@ export default class TextForm extends Component {
     // console.log(this.typingStartTtime)
     setInterval( async () => {
       await this.setState({
-        currentTime: new Date(),
+        currentTime: this.state.currentTime + 1,
       })
-      await console.log(Number(this.state.currentTime.getTime().toString().substring(6, 10)))
-      await console.log(Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))
-      await console.log(Number(this.state.currentTime.getTime().toString().substring(6, 10)) - Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))
+      // await console.log(Number(this.state.currentTime)
       // await console.log(this.state.typingSpeed)
       // await console.log(this.state.randomWord.length)
       // await console.log(this.state.randomWordString.length)
-      await this.setState({typingSpeed: (this.state.randomWord.length - this.state.randomWordString.length) / (Number(this.state.currentTime.getTime().toString().substring(6, 10)) - Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))*60})
+      await this.setState({typingSpeed: (this.state.randomWord.length - this.state.randomWordString.length) / (this.state.currentTime)*60})
       console.log(this.state.typingSpeed)
     }, 1000);
   }
