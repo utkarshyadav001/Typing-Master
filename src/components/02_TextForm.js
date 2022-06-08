@@ -8,7 +8,8 @@ export default class TextForm extends Component {
     this.state = {
       Dev: "Utkarsh Yadav",
       text: "",
-      randomWord: randomWords({ exactly: 15, join: ' ' }),
+      randomWord: randomWords({ exactly: 500, join: ' ' }),
+      randomWordString: [],
       currentTime: new Date(),
       typingStartTtime: false,
       typingSpeed: NaN
@@ -20,7 +21,7 @@ export default class TextForm extends Component {
     await this.setState({randomWordString: this.state.randomWord, typingStartTtime: new Date()})
     document.getElementById("displayWord").innerText = this.state.randomWordString.substring(0,58);
     // this.handleOnChange();
-    this.typingSpeed()
+    this.typingSpeed();
   }
   
   
@@ -51,12 +52,13 @@ export default class TextForm extends Component {
       await this.setState({
         currentTime: new Date(),
       })
-      // await console.log(Number(this.state.currentTime.getTime().toString().substring(7, 10)))
-      // await console.log((Number(this.state.typingStartTtime.getTime().toString().substring(7, 10))))
+      await console.log(Number(this.state.currentTime.getTime().toString().substring(6, 10)))
+      await console.log(Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))
+      await console.log(Number(this.state.currentTime.getTime().toString().substring(6, 10)) - Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))
       // await console.log(this.state.typingSpeed)
       // await console.log(this.state.randomWord.length)
       // await console.log(this.state.randomWordString.length)
-      await this.setState({typingSpeed: (this.state.randomWord.length - this.state.randomWordString.length) / (Number(this.state.currentTime.getTime().toString().substring(7, 10)) - Number(this.state.typingStartTtime.getTime().toString().substring(7, 10)))*60})
+      await this.setState({typingSpeed: (this.state.randomWord.length - this.state.randomWordString.length) / (Number(this.state.currentTime.getTime().toString().substring(6, 10)) - Number(this.state.typingStartTtime.getTime().toString().substring(6, 10)))*60})
       console.log(this.state.typingSpeed)
     }, 1000);
   }
@@ -71,8 +73,11 @@ export default class TextForm extends Component {
     this.props.showAlert("sucess", "Converted to upperCase!");
   }
 
+  // async componentDidMount(){
+  // document.getElementById("displayWord").innerText = this.state.randomWord.toString().substring(0,58);
+  // }
 
-
+  
   render() {
     return (
 
@@ -85,8 +90,11 @@ export default class TextForm extends Component {
 
           <h2>Summary</h2>
           <h2>{this.state.typingSpeed.toFixed()}</h2>
-          <p>{this.state.text.split(" ").filter((words) => { return words }).length} words and {this.state.text.length} characters</p>
-          <p>{0.008 * this.state.text.split(" ").filter((words) => { return words }).length} Min read time</p>
+          <p>{this.state.randomWord.split(" ").filter((words) => { return words }).length} Total words and {this.state.randomWord.length} Total characters</p>
+          <p>{this.state.randomWordString.length} Total words and {this.state.randomWordString.length} Total characters</p>
+
+
+          {/* <p>{0.008 * this.state.text.split(" ").filter((words) => { return words }).length} Min read time</p> */}
           <h2>Preview</h2>
           <p id="preview">{this.state.text.length === 0 ? "Enter text " : this.state.text}</p>
         </div>

@@ -47,7 +47,7 @@ function App() {
     <div>
       <Router>
 
-        <Navbar title="Text Analyzer" connectWallet={false}  togglemode={togglemode} mode={mode}/>
+        <Navbar title="Fast Typing Master" connectWallet={false}  togglemode={togglemode} mode={mode}/>
         <Alert alert={alert} mode={mode} />
         
         <Routes>
