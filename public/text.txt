@@ -3,6 +3,3 @@ const dev ={
     age: 17,
     app: "React js
 }
-
-changing timer count function 
-adding logo192.png, logo512.png, robots.txt  and remove same useless files

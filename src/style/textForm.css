@@ -1,8 +1,9 @@
 .main{
     width: 100%;
     margin-top: 0px;
-    min-height: 100vh;
-    padding-top: 30px;
+    min-height: 93vh;
+    padding-top: 33px;
+    padding-bottom: 10px;
 }
 #textForm{
     display: block;
@@ -10,24 +11,22 @@
     margin: auto;
     /* color: white; */
 }
-#textForm>h2{
-    padding: 2px 0px 4px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#displayWord{
+#displayWordBox{
+    position: relative;
     width: 89%;
     border: 2px solid red;
-    border-radius: 13px;
+    border-radius: 7px;
     padding: 9px 7px;
-    padding-right: 0px;
-    font-size: 30px;
+    font-size: 20px;
     margin: 8px 1px;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 5;
 }
 
 #Text_box{
-    display: block;
+    /* display: block; */
     font-size: 25px;
+    height: 100px;
     background-color: rgb(255, 247, 247);
     border-radius: 5px;
     font-family:  sans-serif;
@@ -36,12 +35,14 @@
     width: 90%;
     /* height: 40%;
     display: block; */
+    outline: none;
 }
 .btn{
+    font-size: 13px;
     padding: 8px 18px;
     color: white;
     background-color: blue;
-    border: 2px solid rgb(0, 255, 208);
+    border: 2px solid rgb(157, 255, 0);
     border-radius: 5px;
     margin: 4px 2px;
     cursor: pointer;
@@ -49,13 +50,27 @@
 .btn:active{
     background-color: red;
 }
-#dark{
-    background-color: rgb(4, 9, 56);
-    color: white;
+.btn:disabled{
+    border-color: black;
+    background-color: rgb(161, 161, 233);
+    cursor: not-allowed;
 }
-#light{
-    background-color: rgb(255, 255, 255);
-    color: black;
+#summary{
+    font-family:  Courier, monospace;
+    margin-top: 2em;
+    /* text-align: center; */
+}
+#summary>span{
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+}
+#summary>p{
+    /* padding: 2px 0px 4px 0px; */
+    margin: 3px 0px;
+    font-size: 1.1em;
+    margin-left: 5px;
+    /* font-family:  serif; */
 }
 
 

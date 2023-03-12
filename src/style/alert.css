@@ -3,6 +3,7 @@
     position: absolute;
 }
 #alertBox{
+    text-align: center;
     padding: 6px 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(217, 245, 210);

@@ -16,8 +16,11 @@ export default function Navbar(props) {
         {/* Navbar Button Here */}
         <div id="navBtn">
           <ul>
-            <li><Link to="/" id="homeBtn">Home</Link></li>
-            <li><Link to="/about" id="aboutBtn">About</Link></li>
+            <li><Link to="/" id="homeBtn">Home</Link></li> 
+            <li><Link to="/learning" id="aboutBtn">Learning</Link></li>
+            <li><Link to="/trips" id="aboutBtn">Trip & Trick</Link></li>
+            <li><Link to="/about" id="aboutBtn">About Us</Link></li>
+            {/* <li><Link to="/about" id="aboutBtn">Premium</Link></li> */}
           </ul>
         </div>
 
@@ -38,7 +41,6 @@ export default function Navbar(props) {
 
 
 Navbar.defaultProps = {
-  title: "React Master",
-  connectWallet: true,
+  title: "Typing Master",
 
 }

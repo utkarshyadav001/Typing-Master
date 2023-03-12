@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+KeyBoard.js
+keyBoard.css
+text.js
+
+/backend
+Main.js
+text.js
+to_do.txt
